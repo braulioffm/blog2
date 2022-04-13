@@ -7,6 +7,13 @@
 @stop
 
 @section('content')
+
+        @if (session('info'))
+            <div class="alert alert-success">
+                 <strong>{{session('info')}}</strong>
+            </div>
+        @endif
+
     <div class="card">
         <div class="card-body">
             {!! Form::open(['route' => 'admin.categories.store']) !!}
@@ -46,7 +53,7 @@
     <script>
      $(document).ready( function() {
     $("#name").stringToSlug({
-        setEvents: 'keyup keydown blur',
+        setEvents: 'keyup keydown blur load',
         getPut: '#slug',
         space: '-'
     });
