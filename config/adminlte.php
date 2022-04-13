@@ -258,6 +258,13 @@ return [
             'text' => 'Categorías',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-buffer',
+            'active' => ['admin/categories*']
+        ],
+        [
+            'text' => 'Etiquetas',
+            'route'  => 'admin.tags.index',
+            'icon' => 'fas fa-tag',
+            'active' => ['admin/tags*']
         ],
         [
             'text' => 'change_password',
