@@ -11,6 +11,9 @@ use App\Models\Tag;
 
 class Post extends Model
 {
+
+    protected $guarded = ['id', 'create_at', 'update_at'];
+
     use HasFactory;
 
     //relacion uno a muchos inversa

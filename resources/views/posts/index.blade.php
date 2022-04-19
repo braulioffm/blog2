@@ -7,7 +7,7 @@
             @foreach($posts as $post)
 
                 @if($loop->first)
-                <article class="w-full h-80 bg-cover bg-center md:col-span-2 lg:col-span-2" style="background-image: url( {{Storage::url($post->image->url)}} )">
+                <article class="w-full h-80 bg-cover bg-center md:col-span-2 lg:col-span-2" style="background-image: url(@if($post->image){{Storage::url($post->image->url)}}@else https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_960_720.jpg @endif)">
                     <div class="w-full h-full px-8 flex flex-col justify-center">
 
                         <div>
@@ -24,7 +24,7 @@
                 @continue 
                 @endif
 
-                <article class="w-full h-80 bg-cover bg-center" style="background-image: url( {{Storage::url($post->image->url)}} )">
+                <article class="w-full h-80 bg-cover bg-center" style="background-image: url(@if($post->image){{Storage::url($post->image->url)}}@else https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_960_720.jpg @endif)">
                     <div class="w-full h-full px-8 flex flex-col justify-center">
 
                         <div>
