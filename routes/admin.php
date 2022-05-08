@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\UserController;
 
 Route::get('', [HomeController::class, 'index'])->name('admin.home');
 
-Route::resource('users', UserController::class)->names('admin.users');
+Route::resource('users', UserController::class)->only(['index', 'edit', 'update'])->names('admin.users');
 
 //Crear 7 rutas de crud: php artisan make:controller Admin/CategoryController -r
 Route::resource('categories', CategoryController::class)->names('admin.categories');

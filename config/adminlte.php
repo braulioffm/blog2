@@ -252,6 +252,15 @@ return [
             'icon'        => 'fas fa-tachometer-alt fa-fw',
             //'label'       => '4',
             'label_color' => 'success',
+            'can'          =>   'admin.home'
+        ],
+        [
+            'text'        => 'Usuarios',
+            'route'         => 'admin.users.index',
+            'icon'        => 'fas fa-user-alt fa-fw',
+            //'label'       => '4',
+            'label_color' => 'success',
+            'can'          =>   'admin.users.index'
         ],
         [
             'text'        => 'Lista de Usuarios',
@@ -265,13 +274,15 @@ return [
             'text' => 'Categorías',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-buffer',
-            'active' => ['admin/categories*']
+            'active' => ['admin/categories*'],
+            'can'     =>   'admin.categories.index'
         ],
         [
             'text' => 'Etiquetas',
             'route'  => 'admin.tags.index',
             'icon' => 'fas fa-tag',
-            'active' => ['admin/tags*']
+            'active' => ['admin/tags*'],
+            'can'     =>   'admin.tags.index'
         ],
         [
             'text' => 'change_password',
@@ -320,12 +331,14 @@ return [
         [
             'text'       => 'Lista de Posts',
             'route'        => 'admin.posts.index',
-            'icon'         => 'fas fa-fw fa-clipboard'
+            'icon'         => 'fas fa-fw fa-clipboard',
+            'can'          =>   'admin.posts.index'
         ],
         [
             'text'       => 'Crear nuevo Post',
             'route'        => 'admin.posts.create',
-            'icon'         => 'fas fa-fw fa-file'
+            'icon'         => 'fas fa-fw fa-file',
+            'can'          =>   'admin.posts.create'
         ],
     ],
 
