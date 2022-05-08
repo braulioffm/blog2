@@ -255,19 +255,20 @@ return [
             'can'          =>   'admin.home'
         ],
         [
-            'text'        => 'Usuarios',
-            'route'         => 'admin.users.index',
-            'icon'        => 'fas fa-user-alt fa-fw',
-            //'label'       => '4',
-            'label_color' => 'success',
-            'can'          =>   'admin.users.index'
-        ],
-        [
             'text'        => 'Lista de Usuarios',
             'route'         => 'admin.users.index',
             'icon'        => 'fas fa-user-alt fa-fw',
             //'label'       => '4',
             'label_color' => 'success',
+            'can'       => 'admin.users.index'
+        ],
+        [
+            'text'        => 'Lista de Roles',
+            'route'         => 'admin.roles.index',
+            'icon'        => 'fas fa-cog-alt fa-fw',
+            //'label'       => '4',
+            'label_color' => 'success',
+            //'can'       => 'admin.roles.index'
         ],
         ['header' => 'ADMINISTRADOR'],
         [
@@ -284,7 +285,7 @@ return [
             'active' => ['admin/tags*'],
             'can'     =>   'admin.tags.index'
         ],
-        [
+        /*[
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
@@ -326,7 +327,7 @@ return [
                     'url'  => '#',
                 ],
             ],
-        ],
+        ],*/
         ['header' => 'OPCIONES DE BLOG'],
         [
             'text'       => 'Lista de Posts',

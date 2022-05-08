@@ -7,11 +7,7 @@
 @stop
 
 @section('content')
-<<<<<<< HEAD
-
-=======
     
->>>>>>> origin
     @livewire('admin.users-index')
 
 @stop
